@@ -7,7 +7,6 @@
 
 import React from 'react';
 // @ts-ignore
-import {ButtonUni} from 'uni-design';
 import {
   SafeAreaView,
   ScrollView,
@@ -16,13 +15,7 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -44,14 +37,8 @@ function App(): JSX.Element {
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <ButtonUni
-            style={{
-              backgroundColor: 'orange',
-            }}>
-            Button dep
-          </ButtonUni>
-        </View>
+          }}
+        />
       </ScrollView>
     </SafeAreaView>
   );
