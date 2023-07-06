@@ -1,5 +1,3 @@
-// In App.js in a new project
-
 import React, {useRef} from 'react';
 import {
   NavigationContainer,
@@ -14,16 +12,13 @@ const Stack = createNativeStackNavigator();
 
 const MainUI = () => {
   const navigationRef = useNavigationContainerRef();
-  const routeNameRef = useRef<string>();
-  console.log("AHAHÂHAHAH")
   return (
     <NavigationContainer
       ref={navigationRef}
       onReady={() => {
-        routeNameRef.current = navigationRef.getCurrentRoute()?.name;
-        return RNBootSplash.hide({fade: true, duration: 100});
+        return RNBootSplash.hide({fade: true, duration: 500});
       }}>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen
           name="Details"
