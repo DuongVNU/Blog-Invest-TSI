@@ -1,7 +1,9 @@
 import React from 'react';
 import {View, Text, StyleSheet, Pressable} from 'react-native';
+import {MainStackScreenProps} from '../../../navigation/MainStack';
+type Props = MainStackScreenProps<'Detail'>;
 
-const DetailScreen = ({navigation}) => {
+const DetailScreen: React.FC<Props> = ({navigation}) => {
   return (
     <View style={styles.screenContainer}>
       <Text style={styles.title}>Detail Screen</Text>

@@ -1,9 +1,10 @@
 import React from 'react';
 import {View, Text, StyleSheet, Pressable} from 'react-native';
-import RNBootSplash from 'react-native-bootsplash';
+import {MainStackScreenProps} from '../../../navigation/MainStack';
 
-const HomeScreen = ({navigation}) => {
-  
+type Props = MainStackScreenProps<'Home'>;
+
+const HomeScreen: React.FC<Props> = ({navigation}) => {
   return (
     <View style={styles.screenContainer}>
       <Text style={styles.title}>Home Screen</Text>
